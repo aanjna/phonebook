@@ -24,4 +24,23 @@ Run main class MPokketApplication.java
   PRIMARY KEY (id)
   );
 
+collections
+GET :- 
+'curl --location 'localhost:8080/api/v1/phone-book''
 
+POST :- 'curl --location 'localhost:8080/api/v1/phone-book' \
+--header 'Content-Type: application/json' \
+--data '{
+"firstName": "Praveen",
+"lastName": "Patel",
+"phoneNumber": "9660294530"
+}'''
+
+PUT :- 
+'curl --location --request PUT 'localhost:8080/api/v1/phone-book/2' \
+--header 'Content-Type: application/json' \
+--data '{
+"firstName": "Rohit",
+"lastName": "Sharma",
+"phoneNumber": "9669294590"
+}''

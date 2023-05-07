@@ -29,7 +29,7 @@ public class PhoneBookController {
             PhoneBook phoneBook = phoneBookService.createPhoneRecorde(phoneBookDto);
             return new ResponseEntity<>(phoneBook, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
     }
 

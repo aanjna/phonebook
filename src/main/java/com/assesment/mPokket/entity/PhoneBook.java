@@ -13,6 +13,7 @@ public class PhoneBook {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial")
     private Long id;
+
     @Column(name="first_name")
     private String firstName;
     @Column(name="last_name")
