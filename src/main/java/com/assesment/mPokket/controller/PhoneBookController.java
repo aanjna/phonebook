@@ -39,6 +39,11 @@ public class PhoneBookController {
         return new ResponseEntity<>(phoneBook, HttpStatus.OK);
     }
 
+    @GetMapping("/{lastname}")
+    public ResponseEntity<PhoneBook> getPhoneBookByLastName(@PathVariable("last_name") String lastName) {
+        PhoneBook phoneBook = phoneBookService.getPhoneBookByLastName(lastName);
+        return new ResponseEntity<>(phoneBook, HttpStatus.OK);
+    }
     @GetMapping
     public ResponseEntity<List<PhoneBook>> getAllRecords() {
         List<PhoneBook> phoneBookList = phoneBookService.getAllPhoneRecords();

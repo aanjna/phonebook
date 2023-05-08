@@ -41,6 +41,12 @@ public class PhoneBookServiceImpl implements PhoneBookService {
     }
 
     @Override
+    public PhoneBook getPhoneBookByLastName(String lastName) {
+        Optional<PhoneBook> phoneBook = phoneBookRepository.findByLastName(lastName);
+        return phoneBook.get();
+    }
+
+    @Override
     public List<PhoneBook> getAllPhoneRecords() {
         return (List<PhoneBook>) phoneBookRepository.findAll();
     }

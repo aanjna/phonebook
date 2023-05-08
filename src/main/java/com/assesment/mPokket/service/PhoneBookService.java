@@ -10,7 +10,7 @@ public interface PhoneBookService {
     PhoneBook createPhoneRecorde(PhoneBookDto phoneBookDto);
 
     PhoneBook getPhoneBookById(String id);
-
+    PhoneBook getPhoneBookByLastName(String lastName);
     List<PhoneBook> getAllPhoneRecords();
 
     PhoneBook updatePhoneBookRecord(String id, PhoneBookDto phoneBookDto);
